@@ -1,2 +1,2 @@
-# codbex-mnemos
+# codbex-hades
 Database Management Platform
