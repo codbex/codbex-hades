@@ -1,1 +1,0 @@
-java -jar ./target/codbex-hades-spring-0.1.0-SNAPSHOT.jar
