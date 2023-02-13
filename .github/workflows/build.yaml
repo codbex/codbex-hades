@@ -47,8 +47,9 @@ jobs:
         cd application
         docker buildx build --tag codbex-hades -o type=image --platform=linux/arm64,linux/amd64 .
 
-    - name: Push Docker Image
+    - name: Build and Push Docker Image
       if: ${{ inputs.pushImage }}
       run: |
+        cd application
         docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
         docker buildx build --push --tag ghcr.io/codbex/codbex-hades:${{ inputs.version }} -o type=image --platform=linux/arm64,linux/amd64 .
