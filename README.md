@@ -4,6 +4,12 @@ Hades Edition contains all the available standard components.
 
 It is good for exploration about the different features and their applicability in particular scenarios.
 
+#### Docker
+
+```
+docker run --name codbex-hades --rm -p 8080:8080 ghcr.io/codbex/codbex-hades:latest
+```
+
 #### Build
 
 	mvn clean install
