@@ -3,9 +3,13 @@ name: Build
 on:
   workflow_call:
     inputs:
-      version:
+      dockerVersion:
         type: string
         default: latest
+      releaseVersion:
+        type: string
+      snapshotVersion:
+        type: string
       pushImage:
         type: boolean
         default: false
@@ -33,6 +37,13 @@ jobs:
         java-version: '13'
         architecture: x64
 
+    - name: Maven Set Release Version
+      if: ${{ inputs.releaseVersion && inputs.releaseVersion }}
+      run: |
+        mvn versions:set -DnewVersion=${{ inputs.releaseVersion }}
+        git add .
+        git commit -m "version set to ${{ inputs.releaseVersion }} for release"
+
     - name: Maven Build
       run: mvn clean install
 
@@ -53,3 +64,11 @@ jobs:
         cd application
         docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
         docker buildx build --push --tag ghcr.io/codbex/codbex-hades:${{ inputs.version }} -o type=image --platform=linux/arm64,linux/amd64 .
+
+    - name: Maven Set Snapshot Version
+      if: ${{ inputs.snapshotVersion && inputs.releaseVersion}}
+      run: |
+        mvn versions:set -DnewVersion=${{ inputs.snapshotVersion }}
+        git add .
+        git commit -m "version set to ${{ inputs.snapshotVersion }} for development"
+        git push

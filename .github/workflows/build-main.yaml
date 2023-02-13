@@ -9,6 +9,6 @@ jobs:
   main:
     uses: ./.github/workflows/build.yaml
     with:
-      version: latest
+      dockerVersion: latest
       pushImage: true
     secrets: inherit
