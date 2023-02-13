@@ -38,11 +38,17 @@ jobs:
     - name: Maven Build
       run: mvn clean install
 
+    - name: Setup Docker Buildx
+      run: |
+        docker buildx create --name codbex-builder
+        docker buildx use codbex-builder
+
     - name: Build Docker Image
       run: |
         cd application
-        docker build -t codbex-hades .
-        docker tag codbex-hades ghcr.io/codbex/codbex-hades:${{ inputs.version }}
+        docker buildx build --tag codbex-hades ghcr.io/codbex/codbex-hades:${{ inputs.version }} -o type=image --platform=linux/arm64,linux/amd64 .
+        # docker build -t codbex-hades .
+        # docker tag codbex-hades ghcr.io/codbex/codbex-hades:${{ inputs.version }}
 
     - name: Push Docker Image
       if: ${{ inputs.pushImage }}
