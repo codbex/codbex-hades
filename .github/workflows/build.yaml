@@ -44,13 +44,8 @@ jobs:
         docker build -t codbex-hades .
         docker tag codbex-hades ghcr.io/codbex/codbex-hades:${{ inputs.version }}
 
-  push:
-    if: ${{ inputs.pushImage }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Docker Login
-      run: docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
-
     - name: Push Docker Image
-      run: docker push ghcr.io/codbex/codbex-hades:${{ inputs.version }}
+      if: ${{ inputs.pushImage }}
+      run: |
+        docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+        docker push ghcr.io/codbex/codbex-hades:${{ inputs.version }}
