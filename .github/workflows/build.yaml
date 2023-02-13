@@ -37,6 +37,13 @@ jobs:
         java-version: '13'
         architecture: x64
 
+    - name: "Configure Git"
+      run: |
+        git fetch
+        git checkout main
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
     - name: Maven Set Release Version
       if: ${{ inputs.releaseVersion && inputs.releaseVersion }}
       run: |
@@ -72,3 +79,21 @@ jobs:
         git add .
         git commit -m "version set to ${{ inputs.snapshotVersion }} for development"
         git push
+        git checkout -b ${{ inputs.releaseVersion }}
+        git push origin ${{ inputs.releaseVersion }}
+
+    - name: "Create Release"
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag_name: v${{ inputs.releaseVersion }}
+        name: ${{ inputs.releaseVersion }}
+        draft: false
+        prerelease: false
+        files: |
+          LICENSE
+        body: |
+          ## codbex Hades - ${{ inputs.releaseVersion }}
+          Database Explorer
+
