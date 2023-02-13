@@ -6,6 +6,6 @@ on:
       - main
 
 jobs:
-  main:
+  pull_request:
     uses: ./.github/workflows/build.yaml
     secrets: inherit
