@@ -46,6 +46,7 @@ jobs:
 
   push:
     if: ${{ inputs.pushImage }}
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Docker Login
