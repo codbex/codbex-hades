@@ -1,0 +1,53 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+        default: latest
+      pushImage:
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Cache local Maven repository
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-maven-
+
+    - name: Set up JDK 13
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '13'
+        architecture: x64
+
+    - name: Maven Build
+      run: mvn clean install
+
+    - name: Docker Login
+      run: docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+
+    - name: Build Docker Image
+      run: |
+        cd application
+        docker build -t codbex-hades .
+        docker tag codbex-hades ghcr.io/codbex/codbex-hades:${{ inputs.version }}
+        docker push ghcr.io/codbex/codbex-hades:${{ inputs.version }}
+
+    - name: Push Docker Image
+      if: ${{ inputs.pushImage }}
+      run: docker push ghcr.io/codbex/codbex-hades:${{ inputs.version }}
