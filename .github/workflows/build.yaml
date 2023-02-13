@@ -83,7 +83,7 @@ jobs:
         git push origin ${{ inputs.releaseVersion }}
 
     - name: "Create Release"
-      id: create_release
+      if: ${{ inputs.snapshotVersion && inputs.releaseVersion}}
       uses: softprops/action-gh-release@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
