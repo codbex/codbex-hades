@@ -7,7 +7,7 @@ on:
 
 jobs:
   main:
-    uses: ./.github/workflows/build.yaml@main
+    uses: codbex/codbex-hades/.github/workflows/build.yaml@main
     with:
       pushImage: true
     secrets: inherit
