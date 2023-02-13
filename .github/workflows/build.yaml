@@ -63,7 +63,7 @@ jobs:
       run: |
         cd application
         docker login ghcr.io -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
-        docker buildx build --push --tag ghcr.io/codbex/codbex-hades:${{ inputs.version }} -o type=image --platform=linux/arm64,linux/amd64 .
+        docker buildx build --push --tag ghcr.io/codbex/codbex-hades:${{ inputs.dockerVersion }} -o type=image --platform=linux/arm64,linux/amd64 .
 
     - name: Maven Set Snapshot Version
       if: ${{ inputs.snapshotVersion && inputs.releaseVersion}}
