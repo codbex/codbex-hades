@@ -1,8 +1,8 @@
 # codbex-hades
 
-Hades Edition contains all the available standard components.
+Hades Edition contains database management standard components.
 
-It is good for exploration about the different features and their applicability in particular scenarios.
+It is good for exploration the database instances, schemes and artefacts. It is also capable of exporting, importing and transferring data sets.
 
 #### Docker
 
