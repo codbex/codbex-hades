@@ -342,9 +342,32 @@
 			<artifactId>dirigible-components-resources-themes</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
+		
+		<!-- Modules -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-resources-unicons</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-database-sql-hana</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+		<artifactId>dirigible-database-sql-mysql</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-database-sql-postgres</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-database-sql-sybase</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
 		
