@@ -347,6 +347,13 @@
 			<artifactId>dirigible-components-resources-unicons</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
+		
+		<!-- Drivers -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
 
 	</dependencies>
 
