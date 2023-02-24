@@ -47,9 +47,9 @@ public class WebSecurityConfiguration extends KeycloakWebSecurityConfigurerAdapt
             .disable()
             .authorizeRequests()
             .anyRequest()
-            .permitAll();
-            // .and()
-            // .sessionManagement()
-            // .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .authenticated()
+            .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 }
