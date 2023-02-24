@@ -1,0 +1,9 @@
+server:
+  port: 8082
+keycloak:
+  auth-server-url: http://localhost:8080
+  realm: SpringBootKeycloak
+  resource: hades
+  public-client: true
+  use-resource-role-mappings: true
+  
