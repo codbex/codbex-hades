@@ -240,11 +240,11 @@
 			<artifactId>dirigible-components-api-io</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-bpm</artifactId>
 			<version>${dirigible.version}</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-api-cms</artifactId>
