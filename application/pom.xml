@@ -28,6 +28,16 @@
 			<artifactId>dirigible-components-group-core</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP-java7</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Security -->
@@ -35,11 +45,23 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-security-basic</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-security-keycloak</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Data -->
@@ -48,6 +70,12 @@
 			<artifactId>dirigible-components-group-database</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Engine -->
@@ -56,6 +84,16 @@
 			<artifactId>dirigible-components-group-engines</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.validation</groupId>
+					<artifactId>validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- API -->
@@ -64,6 +102,12 @@
 			<artifactId>dirigible-components-group-api</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Resources -->
@@ -72,6 +116,12 @@
 			<artifactId>dirigible-components-group-resources</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- IDE -->
@@ -79,6 +129,12 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-console</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- IDE UI -->
@@ -86,98 +142,211 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-about</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-console</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-database</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-database-menu</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-databases</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-logs</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-monaco-extensions</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-problems</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-properties</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-registry</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-registry-service</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-repository</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-repository-service</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-result</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-schema</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-schema-menu</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-sql</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-swagger</artifactId>
 			<version>${dirigible.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-database-sql-hana</artifactId>
@@ -206,6 +375,28 @@
 			<version>${postgresql.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${org.springdoc.openapi.ui.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			<version>${spring.boot.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.validation</groupId>
+					<artifactId>jakarta.validation-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
 
