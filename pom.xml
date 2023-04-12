@@ -313,7 +313,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dirigible.version>8.0.1</dirigible.version>
+        <dirigible.version>8.2.0</dirigible.version>
 
         <java.version>11</java.version>
         <maven.resource.plugin.version>3.3.0</maven.resource.plugin.version>
@@ -337,7 +337,7 @@
         <okhttp3.version>4.10.0</okhttp3.version>
         <slf4j.version>1.7.36</slf4j.version>
         <slf4j.simple.version>1.7.12</slf4j.simple.version>
-        <logback.version>1.4.5</logback.version>
+        <logback.version>1.2.11</logback.version>
         <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
         <h2database.version>2.1.214</h2database.version>
         <postgresql.version>42.5.2</postgresql.version>
