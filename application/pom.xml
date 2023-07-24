@@ -203,12 +203,22 @@
 			<artifactId>dirigible-database-sql-sybase</artifactId>
 			<version>${dirigible.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-database-sql-mongodb</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
 		
 		<!-- Drivers -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-database-mongodb-jdbc</artifactId>
+			<version>${dirigible.version}</version>
 		</dependency>
 
 		<dependency>
