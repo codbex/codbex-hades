@@ -8,7 +8,7 @@ It is good for exploration the database instances, schemes and artefacts. It is 
 
 ```
 docker pull ghcr.io/codbex/codbex-hades:latest
-docker run --name codbex-hades --rm -p 8080:8080 ghcr.io/codbex/codbex-hades:latest
+docker run --name codbex-hades --rm -p 80:80 ghcr.io/codbex/codbex-hades:latest
 ```
 
 #### Build
@@ -32,11 +32,11 @@ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar app
 #### Web
 
 ```
-http://localhost:8080
+http://localhost
 ```
 
 #### REST API
 
 ```
-http://localhost:8080/swagger-ui/index.html
+http://localhost/swagger-ui/index.html
 ```
