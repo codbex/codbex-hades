@@ -9,5 +9,5 @@ jobs:
   main:
     uses: codbex/codbex-infra/.github/workflows/platform-pull-request.yaml@main
     with:
-      application-name: codbex-hades
+      platform-name: codbex-hades
     secrets: inherit
