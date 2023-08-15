@@ -24,7 +24,7 @@ jobs:
       release-content: |
         ## codbex-hades - ${{ inputs.release-version }}
   
-        Database Explorer Platform
+        Database Management Platform
   
         ## Deployment
   
