@@ -36,5 +36,5 @@ jobs:
   
         ## Access points:
   
-        - [/services/web/ide-database/](http://localhost:80/services/web/ide-database/) - Database Perspective
+        - [/services/web/ide-database/](http://localhost/services/web/ide-database/) - Database Perspective
     secrets: inherit
