@@ -333,7 +333,7 @@
         <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
         
         <ngdbc.version>2.19.16</ngdbc.version>
-        <snowflake.version>3.14.4</snowflake.version>
+        <snowflake.version>3.14.5</snowflake.version>
         <mongodb.version>3.12.14</mongodb.version>
 
         <activemq.version>5.17.3</activemq.version>
