@@ -333,7 +333,7 @@
         <okhttp3.version>4.10.0</okhttp3.version>
         <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
         
-        <ngdbc.version>2.20.11</ngdbc.version>
+        <ngdbc.version>2.20.17</ngdbc.version>
         <snowflake.version>3.14.5</snowflake.version>
         <mongodb.version>3.12.14</mongodb.version>
 
