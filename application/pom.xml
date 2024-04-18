@@ -170,17 +170,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>${org.springdoc.openapi.ui.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-
-
-		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-database-sql-hana</artifactId>
 		</dependency>
@@ -204,6 +193,11 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-database-sql-snowflake</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 		
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -226,12 +220,6 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-tests-framework</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 
