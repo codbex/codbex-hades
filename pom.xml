@@ -133,14 +133,6 @@
             <version>${webjars.locator.version}</version>
         </dependency>
 
-        <!-- Olingo -->
-        <dependency>
-            <groupId>com.codbex.olingo</groupId>
-            <artifactId>olingo-odata2-lib</artifactId>
-            <version>${olingo.version}</version>
-            <type>pom</type>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>
