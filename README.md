@@ -70,4 +70,3 @@ http://localhost/swagger-ui/index.html
 
     DIRIGIBLE_DATABASE_DEFAULT_QUERY_LIMIT="10000000"
 
- 	
