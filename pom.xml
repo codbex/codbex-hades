@@ -168,7 +168,7 @@
     <properties>
         <project.title>Hades by codbex</project.title>
 
-        <dirigible.version>11.2.0</dirigible.version>
+        <dirigible.version>11.2.1</dirigible.version>
 
         <!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
