@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -10,244 +10,246 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<name>codbex - hades - application</name>
-	<artifactId>codbex-hades-application</artifactId>
-	<packaging>jar</packaging>
+    <name>codbex - hades - application</name>
+    <artifactId>codbex-hades-application</artifactId>
+    <packaging>jar</packaging>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
+        <dependency>
             <groupId>com.codbex.hades</groupId>
             <artifactId>codbex-hades-branding</artifactId>
         </dependency>
 
-		<!-- Core -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-core</artifactId>
-			<type>pom</type>
-			<exclusions>
-				<exclusion>
-					<groupId>com.zaxxer</groupId>
-					<artifactId>HikariCP-java7</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		
-		<!-- Security -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-security-basic</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-security-keycloak</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-security-snowflake</artifactId>
-		</dependency>
-		
-		<!-- Data -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-database</artifactId>
-			<type>pom</type>
-		</dependency>
-		
-		<!-- Engine -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-engines-core</artifactId>
-			<type>pom</type>
-		</dependency>
-		
-		<!-- API -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-api-platform</artifactId>
-			<type>pom</type>
-		</dependency>
-		
-		<!-- Resources -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-resources-core</artifactId>
-			<type>pom</type>
-		</dependency>
+        <!-- Core -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-core</artifactId>
+            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.zaxxer</groupId>
+                    <artifactId>HikariCP-java7</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-		<!-- IDE Platform -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-platform-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-platform-about</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-shell-ide</artifactId>
-		</dependency>
-		
-		<!-- IDE Backend -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ide-console</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ide-logs</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ide-problems</artifactId>
-		</dependency>
+        <!-- Security -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-security-basic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-security-keycloak</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-security-snowflake</artifactId>
+        </dependency>
 
-		<!-- IDE Services -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-service-actions</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-service-extensions</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-service-repository</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-service-transport</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-service-workspace</artifactId>
-		</dependency>
+        <!-- Data -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-database</artifactId>
+            <type>pom</type>
+        </dependency>
 
-		<!-- IDE UI Editors -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-editor-monaco</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-editor-monaco-extensions</artifactId>
-		</dependency>
+        <!-- Engine -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-engines-core</artifactId>
+            <type>pom</type>
+        </dependency>
 
-		<!-- IDE UI Menus -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-menu-database</artifactId>
-		</dependency>
+        <!-- API -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-api-platform</artifactId>
+            <type>pom</type>
+        </dependency>
 
-		<!-- IDE UI Perspectives -->
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-perspective-database</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-perspective-settings</artifactId>
-		</dependency>
-		
-		<!-- IDE UI Views -->
-		
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-console</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-databases</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-loggers</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-logs</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-import</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-problems</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-sql</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-view-transfer</artifactId>
-		</dependency>
+        <!-- Resources -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-resources-core</artifactId>
+            <type>pom</type>
+        </dependency>
 
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-database-sql-hana</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-		<artifactId>dirigible-database-sql-mysql</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-database-sql-postgres</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-database-sql-mongodb</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-database-sql-snowflake</artifactId>
-		</dependency>
+        <!-- IDE Platform -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-platform-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-platform-about</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-shell-ide</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-database-mongodb-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.sap.cloud.db.jdbc</groupId>
-			<artifactId>ngdbc</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>net.snowflake</groupId>
-		    <artifactId>snowflake-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-tests-framework</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <!-- IDE Backend -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ide-console</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ide-logs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ide-problems</artifactId>
+        </dependency>
 
-	</dependencies>
+        <!-- IDE Services -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-service-actions</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-service-extensions</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-service-repository</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-service-transport</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-service-workspace</artifactId>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <!-- IDE UI Editors -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-editor-monaco</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-editor-monaco-extensions</artifactId>
+        </dependency>
+
+        <!-- IDE UI Menus -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-menu-database</artifactId>
+        </dependency>
+
+        <!-- IDE UI Perspectives -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-perspective-database</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-perspective-settings</artifactId>
+        </dependency>
+
+        <!-- IDE UI Views -->
+
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-console</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-databases</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-loggers</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-logs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-import</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-problems</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-sql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-view-transfer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-sql-hana</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-sql-mysql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-sql-postgres</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-sql-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-sql-snowflake</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-database-mongodb-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sap.cloud.db.jdbc</groupId>
+            <artifactId>ngdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.snowflake</groupId>
+            <artifactId>snowflake-jdbc</artifactId>
+        </dependency>
+
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-tests-framework</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
