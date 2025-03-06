@@ -10,19 +10,14 @@
  */
 package com.codbex.hades.ui.tests;
 
-import com.codbex.hades.ui.Hades;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
-
-    @Autowired
-    private Hades hades;
+class HomePageIT extends HadesIntegrationTest {
 
     @Test
     void testOpenHomepage() {
-        hades.openHomePage();
+        ide.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
     }

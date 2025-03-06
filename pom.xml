@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.codbex.platform</groupId>
         <artifactId>codbex-platform-parent</artifactId>
-        <version>11.2.6</version>
+        <version>11.3.0</version>
     </parent>
 
     <name>codbex - hades - parent</name>
@@ -28,6 +28,7 @@
     <issueManagement>
         <url>https://github.com/codbex/codbex-hades/issues</url>
     </issueManagement>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -38,6 +39,7 @@
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
+
     <repositories>
         <repository>
             <id>mvnrepository</id>
@@ -55,6 +57,33 @@
         <module>application</module>
         <module>branding</module>
     </modules>
+
+    <properties>
+        <project.title>Hades by codbex</project.title>
+
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- Java -->
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Maven -->
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+        <maven-jacoco-plugin.version>0.8.12</maven-jacoco-plugin.version>
+        <maven-git-commit-id-plugin.version>4.9.10</maven-git-commit-id-plugin.version>
+        <maven-license-plugin.version>4.3</maven-license-plugin.version>
+
+        <!-- JDBC -->
+        <ngdbc.version>2.20.17</ngdbc.version>
+        <snowflake.version>3.13.34</snowflake.version>
+
+        <profile.content.phase>none</profile.content.phase>
+    </properties>
 
     <dependencies>
 
@@ -127,11 +156,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
             <exclusions>
-            <exclusion>
-                <groupId>org.junit.vintage</groupId>
-                <artifactId>junit-vintage-engine</artifactId>
-            </exclusion>
-        </exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -163,32 +192,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <properties>
-        <project.title>Hades by codbex</project.title>
 
-        <dirigible.version>11.2.1</dirigible.version>
-
-        <!-- Encoding -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<!-- Java -->
-		<java.version>17</java.version>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-
-		<!-- Maven -->
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-		<maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
-        <maven-jacoco-plugin.version>0.8.12</maven-jacoco-plugin.version>
-        <maven-git-commit-id-plugin.version>4.9.10</maven-git-commit-id-plugin.version>
-        <maven-license-plugin.version>4.3</maven-license-plugin.version>
-
-        <!-- JDBC -->
-		<ngdbc.version>2.20.17</ngdbc.version>
-		<snowflake.version>3.13.34</snowflake.version>
-
-        <profile.content.phase>none</profile.content.phase>
-    </properties>
 </project>
