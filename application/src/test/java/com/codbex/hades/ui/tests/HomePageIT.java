@@ -19,6 +19,6 @@ class HomePageIT extends HadesIntegrationTest {
     void testOpenHomepage() {
         ide.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "Hades");
     }
 }
