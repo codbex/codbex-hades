@@ -22,3 +22,5 @@ dist/
 derby.log
 logs/
 .idea
+**/build/reports
+**/ttyd.sh
