@@ -6,35 +6,41 @@
 
 Hades Edition contains database management standard components.
 
-It is good for exploration the database instances, schemes and artefacts. It is also capable of exporting, importing and transferring data sets.
+It is good for exploration the database instances, schemes and artefacts. It is also capable of exporting, importing and
+transferring data sets.
 
 <!-- TOC -->
-* [codbex-hades](#codbex-hades)
-  * [Run steps](#run-steps)
-    * [Start using Docker and released image](#start-using-docker-and-released-image)
-    * [Start using Docker and local sources](#start-using-docker-and-local-sources)
-      * [Build the project jar](#build-the-project-jar)
-      * [Build and run docker image locally](#build-and-run-docker-image-locally)
-    * [Java standalone application](#java-standalone-application)
-      * [Start the application](#start-the-application)
-      * [Start the application **in debug** with debug port `8000`](#start-the-application-in-debug-with-debug-port-8000)
-    * [Run unit tests](#run-unit-tests)
-    * [Run integration tests](#run-integration-tests)
-    * [Run all tests](#run-all-tests)
-    * [Format the code](#format-the-code)
-  * [Access the application](#access-the-application)
-  * [REST API](#rest-api)
-      * [Configuration Options](#configuration-options)
-        * [Datasources](#datasources)
-        * [Memory](#memory)
-        * [Log Levels](#log-levels)
-        * [Timeouts](#timeouts)
-        * [Limits](#limits)
+
+* [Hades by codbex](#hades-by-codbex)
+    * [Run steps](#run-steps)
+        * [Start using Docker and released image](#start-using-docker-and-released-image)
+        * [Start using Docker and local sources](#start-using-docker-and-local-sources)
+            * [Build the project jar](#build-the-project-jar)
+            * [Build and run docker image locally](#build-and-run-docker-image-locally)
+        * [Java standalone application](#java-standalone-application)
+            * [Start the application](#start-the-application)
+            * [Start the application **in debug** with debug port
+              `8000`](#start-the-application-in-debug-with-debug-port-8000)
+            * [Spring profiles](#spring-profiles)
+        * [Run unit tests](#run-unit-tests)
+        * [Run integration tests](#run-integration-tests)
+        * [Run all tests](#run-all-tests)
+        * [Format the code](#format-the-code)
+    * [Access the application](#access-the-application)
+    * [REST API](#rest-api)
+        * [Configuration Options](#configuration-options)
+            * [Datasources](#datasources)
+            * [Memory](#memory)
+            * [Log Levels](#log-levels)
+            * [Timeouts](#timeouts)
+            * [Limits](#limits)
+
 <!-- TOC -->
 
 ## Run steps
 
 __Prerequisites:__
+
 - Export the following variables before executing the steps
   ```shell
   export GIT_REPO_FOLDER='<path-to-the-git-repo>'
@@ -55,7 +61,9 @@ docker run --name "$CONTAINER_NAME" -p 80:80 "$IMAGE"
 ---
 
 ### Start using Docker and local sources
+
 #### Build the project jar
+
 ```shell
 cd $GIT_REPO_FOLDER
 mvn -T 1C clean install -P quick-build
@@ -79,9 +87,11 @@ __Prerequisites:__ [Build the project jar](#build-the-project-jar)
 --- 
 
 ### Java standalone application
+
 __Prerequisites:__ [Build the project jar](#build-the-project-jar)
 
 #### Start the application
+
 ```shell
 cd "$GIT_REPO_FOLDER"
 
@@ -93,6 +103,7 @@ java \
 ```
 
 #### Start the application **in debug** with debug port `8000`
+
 ```shell
 cd "$GIT_REPO_FOLDER"
 
@@ -104,6 +115,12 @@ java \
     --add-opens=java.base/java.nio=ALL-UNNAMED \
     -jar application/target/codbex-hades-*.jar
 ```
+
+#### Spring profiles
+
+- Eclipse Dirigible profiles
+  To activate Eclipse Dirigible, you have to add profiles `common` and `app-default` explicitly.<br>
+  Example for profile `snowflake`: `SPRING_PROFILES_ACTIVE=common,snowflake,app-default`
 
 ---
 
@@ -144,6 +161,7 @@ mvn verify -P format
 ---
 
 ## Access the application
+
 - Open URL [http://localhost:80](http://localhost:80)
 - Login with the default credentials username `admin` and password `admin`
 
@@ -152,7 +170,6 @@ mvn verify -P format
 ```
 http://localhost/swagger-ui/index.html
 ```
-
 
 #### Configuration Options
 
