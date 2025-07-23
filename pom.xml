@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.codbex.platform</groupId>
         <artifactId>codbex-platform-parent</artifactId>
-        <version>11.67.0</version>
+        <version>12.2.0</version>
     </parent>
 
     <name>codbex - hades - parent</name>
@@ -56,6 +56,7 @@
     <modules>
         <module>application</module>
         <module>branding</module>
+        <module>components</module>
         <module>integration-tests</module>
     </modules>
 
@@ -193,6 +194,11 @@
             <dependency>
                 <groupId>com.codbex.hades</groupId>
                 <artifactId>codbex-hades-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.codbex.hades</groupId>
+                <artifactId>codbex-hades-components-ui-menu-help</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
