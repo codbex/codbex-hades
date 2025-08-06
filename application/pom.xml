@@ -80,18 +80,41 @@
         <!-- Resources -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-group-resources-core</artifactId>
+            <artifactId>dirigible-components-group-resources-ui</artifactId>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-ui</artifactId>
+            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-ui-menu-help</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-dashboard</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-inbox</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-documents</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- IDE Platform -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-core</artifactId>
+            <artifactId>dirigible-components-resources-platform-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-about</artifactId>
+            <artifactId>dirigible-components-ui-window-about</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
@@ -99,7 +122,7 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-platform-branding</artifactId>
+            <artifactId>dirigible-components-resources-platform-branding</artifactId>
         </dependency>
 
         <!-- IDE Backend -->
@@ -132,16 +155,6 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-ui-service-workspace</artifactId>
-        </dependency>
-
-        <!-- IDE UI Editors -->
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-editor-monaco</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ui-editor-monaco-extensions</artifactId>
         </dependency>
 
         <!-- IDE UI Menus -->
@@ -193,6 +206,12 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-ui-view-transfer</artifactId>
+        </dependency>
+
+        <!-- IDE UI -->
+        <dependency>
+            <groupId>com.codbex.hades</groupId>
+            <artifactId>codbex-hades-components-ui-menu-help</artifactId>
         </dependency>
 
         <dependency>
