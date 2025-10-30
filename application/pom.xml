@@ -62,6 +62,18 @@
             <artifactId>dirigible-components-group-database</artifactId>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-engine-cms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-engine-cms-internal</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-engine-cms-s3</artifactId>
+        </dependency>
 
         <!-- Engine -->
         <dependency>
