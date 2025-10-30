@@ -220,6 +220,13 @@
             <artifactId>dirigible-components-ui-view-transfer</artifactId>
         </dependency>
 
+        <!-- IDE UI Editors -->
+
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-editor-monaco</artifactId>
+        </dependency>
+
         <!-- IDE UI -->
         <dependency>
             <groupId>com.codbex.hades</groupId>
