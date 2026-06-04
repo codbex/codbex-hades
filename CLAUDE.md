@@ -6,8 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Hades ([product page](https://www.codbex.com/products/)) is the database-administration product in the codbex suite — a database-management distribution built on top of [Eclipse Dirigible](https://github.com/eclipse/dirigible). It targets PostgreSQL, MySQL, SAP HANA, H2, and more, providing a Database Explorer, SQL Console, Data Transfer, Data Import/Export, and Anonymization tools. It bundles Dirigible's database, CMS, UI-shell, and security components into a single Spring Boot application.
 
-It is one of several codbex products that each package a focused slice of the platform on the same Dirigible/`codbex-platform-parent` foundation (e.g. Atlas — all-in-one, Helios — APIs, Oceanus — documents, Hyperion — BPM, Iapetus — integrations/ETL, Rhea — model-driven dev, Kronos — SAP compatibility, Phoebe — Airflow workflows). Hades is the dedicated database layer; patterns here generally mirror its sibling products.
-
 This repo contains **almost no business logic of its own** — it is primarily an assembly/packaging project. The actual functionality lives in the `org.eclipse.dirigible:dirigible-components-*` dependencies (and the parent `com.codbex.platform:codbex-platform-parent`). When investigating behavior, expect to read into the Dirigible dependency JARs rather than this repo's source.
 
 ## Build & run
